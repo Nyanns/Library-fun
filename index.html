@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library.Fun</title>
+    <!-- Style utama -->
+    <link rel="stylesheet" href="/Library-fun/CSS/style.css">
+    <!-- Reset CSS untuk mereset style default browser -->
+    <link rel="stylesheet" href="CSS/reset.css">
+</head>
+
+<body>
+    <!-- Container utama untuk seluruh konten -->
+    <div class="container">
+
+        <!-- Header: Bagian atas halaman, bisa berisi logo, navigasi, atau informasi lain -->
+        <div class="header">
+
+            <div class="default-header">
+                <!-- Left: Bagian kiri header, tempatkan konten di sini seperti logo atau navigasi -->
+                <div class="search-container">
+                    <input type="search" id="search" placeholder="Search ...">
+                    <button type="submit" class="search-btn">
+                        <img src="/Library-fun/Media/icons/search 2.png" alt="search-icon">
+                    </button>
+                </div>
+
+                <!-- Right: Bagian kanan header, biasanya tempatkan navigasi atau info user -->
+                <div class="right-header">
+                    <!-- Konten kanan header -->
+                    <a href="#">
+                        <button>
+                            <img src="/Library-fun/Media/icons/message.png" alt="notification-icon">
+                        </button>
+                    </a>
+                    <a href="#" class="header-notif">
+                        <button>
+                            <img src="/Library-fun/Media/icons/chat-bubbles.png" alt="notification-icon">
+                        </button>
+                    </a>
+                    <a href="#" class="header-profil">
+                        <img src="/Library-fun/Media/Img/korone-head-spin.gif" alt="User-Icon">
+                    </a>
+                    <a href="#">
+                        <button>
+                            <img src="/Library-fun/Media/icons/down-arrow.png" alt="dropdown-Icon">
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar: Biasanya berisi navigasi utama atau elemen penting lainnya -->
+        <div class="sidebar">
+
+            <!-- Logo: Tempat logo situs -->
+            <div class="logo">
+                <!-- Logo situs di sini -->
+                <a href="#">
+                    <img src="/Library-fun/Media/Img/acheron-hsr.gif" alt="logo-icon">
+                    <h1>LIBNYANS</h1>
+                </a>
+            </div>
+
+            <!-- Link-top: Bagian atas sidebar, mungkin untuk menu navigasi atas -->
+            <div class="links top">
+                <!-- Navigasi atau link lainnya -->
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="/Library-fun/Media/icons/dashboard-icons.png" alt="Home icon">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/Library-fun/Media/icons/list.png" alt="Category icon">
+                            Category
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/Library-fun/Media/icons/azur-lane-bashful.gif" alt="My-Libbary icon">
+                            My Libbary
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/Library-fun/Media/icons/upload-button.png" alt="Multiple clipboard icon">
+                            Download
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/Library-fun/Media/icons/visible.png" alt="Favorite icon">
+                            Favorite
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Link-bot: Bagian bawah sidebar, mungkin untuk menu atau informasi tambahan -->
+            <div class="links bottom">
+                <!-- Navigasi tambahan atau link lainnya -->
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="/Library-fun/Media/icons/edit-button.png" alt="Setting icon">
+                            Setting
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/Library-fun/Media/icons/question.png" alt="Support icon">
+                            Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/Library-fun/Media/icons/power-button.png" alt="Logout icon">
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main: Bagian konten utama -->
+        <div class="main">
+
+            <!-- Current Read: Seksi untuk menampilkan buku yang sedang dibaca -->
+            <section class="card">
+                <img src="/Library-fun/Media/1351040.png" alt="Image" class="card-image">
+                <div class="card-content">
+                    <h4>Warren P. Abayon</h4>
+                    <h2>Warren Book Part III</h2>
+                    <button class="read-button">Read Now</button>
+                </div>
+            </section>
+
+            <!-- Recommendations: Seksi rekomendasi buku -->
+            <section class="recomend">
+
+                <!-- Top Recommend: Bagian atas rekomendasi, mungkin judul dan tombol aksi -->
+                <article class="top-recomend">
+                    <h1>Recommended</h1> <!-- Judul seksi (misalnya 'Recommended Books') -->
+                    <button>Add Book +</button> <!-- Tombol aksi (misalnya 'See All Recommendations') -->
+                </article>
+
+                <!-- Book Recommend: Bagian untuk menampilkan daftar buku yang direkomendasikan -->
+                <section class="book-recomend" id="book-list">
+                    <!-- Daftar buku rekomendasi -->
+                    <!-- //book loops here -->
+                </section>
+            </section>
+
+            <!-- Popular: Seksi untuk buku populer atau top review -->
+            <section class="book-card">
+                <div class="book-image">
+                    <img src="/Library-fun/Media/bcb39776c40cff3b4ac4b3cf565ffba8.jpg" alt="Book Cover" />
+                </div>
+                <h2 class="book-title">Lorem Ipsum dolor sit</h2>
+                <p class="author-name">Author Name</p>
+
+                <div class="book-rating">
+                    <span class="stars">★★★★★</span>
+                    <span class="rating-value">5.0</span>
+                </div>
+
+                <div class="book-details">
+                    <div class="detail">
+                        <strong>320</strong>
+                        <p>Pages</p>
+                    </div>
+                    <div class="detail">
+                        <strong>643</strong>
+                        <p>Ratings</p>
+                    </div>
+                    <div class="detail">
+                        <strong>110</strong>
+                        <p>Reviews</p>
+                    </div>
+                </div>
+                <p class="book-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore
+                    magna aliqua. Ut enim ad minim veniam...
+                </p>
+            </section>
+
+        </div>
+    </div>
+</body>
+
+</html>

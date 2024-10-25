@@ -1,0 +1,439 @@
+:root {
+  /* Colors */
+  --red: rgb(239, 35, 60);
+  --yellow: #F7D88B;
+  --white: rgb(237, 242, 244);
+  --blue: blue;
+  --main-bg-color: rgb(33, 37, 41); /* Warna abu-abu tua */
+  --secondary-main-bg-color: rgba(33, 37, 41, 0.95); /* Warna abu-abu tua dengan transparansi */
+  --border-color: rgb(217, 40, 39); /* Warna border */
+}
+
+/* Autofill snippet from CSSTricks */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white !important;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--secondary-main-bg-color);
+}
+
+/* Font-face setup */
+@font-face {
+  font-family: "pixel";
+  src: url('/Library-fun/Media/fonts/PixelifySans-VariableFont.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* Container Grid Setup */
+.container {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 3.5fr;
+  grid-template-rows: 1fr auto;
+  font-family: "pixel";
+  background-color: var(--secondary-main-bg-color);
+  word-spacing: 0.15rem;
+}
+
+/* Header Styles */
+.header {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background-color: var(--main-bg-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 8px 0;
+
+  position: sticky !important;
+  top: 0;
+  z-index: 1;
+}
+
+.default-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Search Bar Container */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-inline: 16px;
+  margin-block: 16px;
+  width: 300px;
+  height: 2.5rem;
+  background-color: var(--border-color);
+  border-radius: 30px;
+  transition: box-shadow 0.3s ease-in-out;
+  border: 1px solid var(--border-color);
+}
+
+/* Input Styling */
+#search {
+  width: 85%;
+  height: 100%;
+  padding: 0 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--secondary-main-bg-color);
+  font-size: 1rem;
+  outline: none;
+  transition: width 0.4s ease;
+  color: var(--white);
+  border: 1px solid var(--border-color);
+}
+
+#search::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Input Focus Effect */
+#search:focus {
+  width: 100%;
+}
+
+/* Search Button */
+.search-btn {
+  position: absolute;
+  background-color: transparent;
+  right: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.search-btn img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.search-btn:active {
+  transform: scale(0.9);
+}
+
+/* Menghapus tanda 'x' pada input type search untuk browser Webkit (Chrome, Safari, dll) */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Right Header Styles */
+.right-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-inline: 16px;
+  margin-block: 16px;
+}
+
+.header-profil img {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: var(--white);
+}
+
+.header-profil img:hover {
+  background-color: var(--red);
+}
+
+.right-header .header-notif {
+  margin-right: 8px;
+}
+
+.right-header button {
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: var(--main-bg-color);
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  border-right: 1px solid var(--border-color);
+  outline: 0.01px solid var(--border-color);
+  width: max(200px, 22.2%);
+  height: 100%;
+  position: fixed;
+}
+
+.logo a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 24px 0 8px 16px;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--white);
+  margin: 0;
+}
+
+.logo h1:hover {
+  color: var(--border-color);
+}
+
+.logo img {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 20%;
+}
+
+.links.top {
+  padding: 32px 0 40px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.links.bottom {
+  padding: 40px 0 0 0;
+}
+
+.links li {
+  padding-left: 16px;
+}
+
+.links a,
+.logout a {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.links ul li {
+  list-style: none;
+  margin-block: 8px;
+}
+
+.links ul li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.links ul li:hover {
+  background-color: var(--border-color);
+}
+
+.links img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.links a {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--white);
+}
+
+/* Main Styles */
+.main {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 0.35fr);
+  grid-template-rows: minmax(200px, 500px) 1fr;
+  background-color: var(--secondary-main-bg-color);
+}
+
+/* Card Styles */
+.card {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  margin: 20px;
+  position: relative;
+  width: auto;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.card-image {
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  width: 100%;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.card-content h4 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.card-content h2 {
+  font-size: 2rem;
+  margin-bottom: 32px;
+}
+
+.read-button {
+  padding: 10px 20px;
+  background-color: var(--border-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.read-button:hover {
+  background-color: var(--border-color);
+}
+
+
+/* Additional Sections */
+.recomend {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+ 
+  margin: 20px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+}
+
+.top-recomend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+.top-recomend h1 {
+  font-size: 2rem;
+  color: var(--white);
+}
+
+.top-recomend button {
+  padding: 10px 20px;
+  background-color: var(--border-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+
+.book-card {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  background-color: aquamarine;
+  border-radius: 10px;
+  padding: 16px;
+  color: #fff;
+  text-align: center;
+  margin: 20px 16px 20px 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  border: 1px solid var(--border-color);
+}
+
+.book-image img {
+  min-height: 450px;
+  max-height: auto;
+  border-radius: 8px;
+}
+
+.book-image img:hover {
+  border: 1px solid var(--border-color);
+}
+
+.book-title {
+  font-size: 2rem;
+  margin: 24px 0 8px;
+}
+
+.author-name {
+  font-size: 1rem;
+  color: #f0d9d9;
+}
+
+.book-rating {
+  margin: 32px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stars {
+  color: #ffdd57;
+  font-size: 2rem;
+}
+
+.rating-value {
+  font-size: 1.5rem;
+  margin-left: 8px;
+}
+
+.book-details {
+  display: flex;
+  justify-content: space-around;
+}
+
+.detail {
+  text-align: center;
+}
+
+.detail strong {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.detail p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+.book-description {
+  font-size: 1.5rem;
+  color: #f0d9d9;
+  margin-top: 32px;
+}
